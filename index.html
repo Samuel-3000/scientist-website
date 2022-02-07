@@ -32,6 +32,14 @@
           transform: translateY(-50%);
         }
         </style>
+        <script>
+            function getInputValue(){
+                    // Selecting the input element and get its value: 
+                var inputVal = document.getElementById("myInput").value;
+                    //putting input into paragraph is scientistTarget:
+                document.getElementById("scientistTarget").innerHTML = inputVal + " is your favorite scientist. Thank you.";
+            }
+        </script>
 
 </head>
 <body>
@@ -173,9 +181,13 @@ Location:
     </div>
 
     <div class="w3-container w3-blue w3-padding-large">
-        <input type="text" placeholder="Type your fav. scientist..." id="myInput">
+        <input class="w3-cell" type="text" placeholder="Type your fav. scientist..." id="myInput">
     <button type="button" onclick="getInputValue();">Submit</button>
+        <div class="w3-blue w3-cell w3-padding-large">
+            <p class ="w3-cell w3-blue" id="scientistTarget">
 
+            </p>
+        </div>
 
     </div>
 
